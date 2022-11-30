@@ -1,7 +1,6 @@
 import { Response, Request } from 'express';
 const mongoose = require('mongoose');
 const asyncHandler = require('express-async-handler');
-
 const student = require('../models/studentmodel');
 
 // Get all students
@@ -34,7 +33,7 @@ const deleteStudent = asyncHandler(async (req: Request, res: Response) => {
         res.status(400);
         throw new Error(`${req.params.id} is not a valid id`);
     }
-    const project = await student.findByIdAndDelete(req.params.id);
+    const students = await student.findByIdAndDelete(req.params.id);
     if (!student) {
         res.status(404);
         throw new Error('student not found');
@@ -66,6 +65,7 @@ const updateStudent = asyncHandler(async (req: Request, res: Response) => {
 });
 
 module.exports = {
+    getStudents,
     getStudent,
     createStudent,
     deleteStudent,
