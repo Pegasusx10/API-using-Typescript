@@ -11,7 +11,6 @@ const getStudents = asyncHandler(async (req: Request, res: Response) => {
     res.status(200).json(students);
 });
 
-});
 
 // Get a student by id
 // GET /api/projects/:id
