@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express = require("express");
+var db_1 = require("./database/db");
+var config_1 = require("./utils/config");
+var app = express();
+(0, db_1.connectDB)();
+app.use(express.json());
+app.use('/api/student', require('./routes/StudentRoutes'));
+app.use('/api/students', require('./routes/StudentRoutes'));
+app.listen(config_1.PORT, function () { return console.log("server started on port ".concat(config_1.PORT)); });

@@ -2,6 +2,7 @@ import { Response, Request } from 'express';
 const mongoose = require('mongoose');
 const asyncHandler = require('express-async-handler');
 const student = require('../models/studentmodel');
+const IStudent = require('../models/studentmodel');
 const queryCondition = require('../utils/logic')
 
 // Get all students with pagination and query

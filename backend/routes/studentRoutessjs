@@ -1,0 +1,3 @@
+var express = require('express');
+var router = express.Router();
+var _a = require('../conrollers/studentControllers'), getStudent = _a.getStudent, createStudent = _a.createStudent, deleteStudent = _a.deleteStudent, updateStudent = _a.updateStudent;
