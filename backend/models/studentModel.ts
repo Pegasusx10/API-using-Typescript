@@ -7,7 +7,7 @@ export interface IStudent {
   grade: Number;
   division: string;
 }
-export interface IStudent extends IStudent, Document {}
+// export interface IStudent extends IStudent, Document {}
 
 const studentSchema: Schema = new Schema(
 {
