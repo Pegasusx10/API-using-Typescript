@@ -29,7 +29,7 @@ const getStudents = asyncHandler(async (req: Request, res: Response) => {
 
 
 // Get a student by id
-// GET /api/projects/:id
+// GET /api/student/:id
 const getStudent = asyncHandler(async (req: Request, res: Response) => {
     if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
         res.status(400);
